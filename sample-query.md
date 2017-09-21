@@ -1,3 +1,5 @@
+#GraphiQL을 Request/Response 정보.
+
 ### Company정보와 users를 가져오는 샘플.
 rename, fragment 사용
 
@@ -83,6 +85,29 @@ mutation {
       "id": "SJ0Wox-i-",
       "firstName": "gu",
       "age": 40
+    }
+  }
+}
+```
+
+
+###mutation을 이용한 유저 삭제.
+
+#### Request
+```
+mutation {
+	deleteUser(id : "SJ0Wox-i-") {
+    id
+  }
+}
+
+```
+#### Response
+```json
+{
+  "data": {
+    "deleteUser": {
+      "id": null
     }
   }
 }
