@@ -112,3 +112,31 @@ mutation {
   }
 }
 ```
+
+###mutation을 이용한 유저 수정(Patch).
+
+#### Request
+```
+mutation {
+  editUser(id: "44", firstName: "ra", age: 45) {
+    id
+    firstName
+    age
+    companyId
+  }
+}
+
+```
+#### Response
+```json
+{
+  "data": {
+    "editUser": {
+      "id": "44",
+      "firstName": "ra",
+      "age": 45,
+      "companyId": null
+    }
+  }
+}
+```
