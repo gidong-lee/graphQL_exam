@@ -122,9 +122,15 @@ mutation {
     id
     firstName
     age
-    companyId
+    company {
+      id
+      name,
+      description
+    }
   }
 }
+
+
 
 ```
 #### Response
@@ -135,7 +141,11 @@ mutation {
       "id": "44",
       "firstName": "ra",
       "age": 45,
-      "companyId": null
+      "company": {
+        "id": "1",
+        "name": "tomorrow",
+        "description": "111st"
+      }
     }
   }
 }
