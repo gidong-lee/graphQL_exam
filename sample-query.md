@@ -1,5 +1,89 @@
 #GraphiQL을 Request/Response 정보.
 
+
+### User정보와 유저의 회사정보를 가져오는 샘플.
+
+####Request 
+```
+{
+  user(id: "23") {
+    id
+    firstName
+    company {
+      name
+    }
+  }
+}
+
+```
+
+#### Response
+```json
+{
+  "data": {
+    "user": {
+      "id": "23",
+      "firstName": "ko",
+      "company": {
+        "name": "tomorrow"
+      }
+    }
+  }
+}
+```
+
+
+### Company정보와 users를 가져오는 샘플.
+rename, fragment 사용
+
+####Request 
+```
+{
+  company(id: "1") {
+    id
+    name
+    description
+    users {
+      id
+      firstName
+      age
+    }
+  }
+}
+
+```
+
+#### Response
+```json
+{
+  "data": {
+    "company": {
+      "id": "1",
+      "name": "tomorrow",
+      "description": "111st",
+      "users": [
+        {
+          "id": "23",
+          "firstName": "ko",
+          "age": 20
+        },
+        {
+          "id": "40",
+          "firstName": "lee",
+          "age": 40
+        },
+        {
+          "id": "44",
+          "firstName": "ra",
+          "age": 45
+        }
+      ]
+    }
+  }
+}
+```
+
+
 ### Company정보와 users를 가져오는 샘플.
 rename, fragment 사용
 
