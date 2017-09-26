@@ -34,7 +34,6 @@
 
 
 ### Company정보와 users를 가져오는 샘플.
-rename, fragment 사용
 
 ####Request 
 ```
