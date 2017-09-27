@@ -23,7 +23,7 @@ npm run dev
 
 
 ### url 및 파일 정보
-- json-server
+- json-server(json 파일을 읽어 rest api 서버처럼 동작)
     - 테스트 URL : http://localhost:3000/users/41
     - data source : ./db.json
 - graphiQL
