@@ -18,8 +18,10 @@ const CompanyType = new GraphQLObjectType({
     description: {type: GraphQLString},
     users: {
       type: new GraphQLList(UserType),
+      args: {limit: {type: GraphQLInt}},
       resolve(parentValue, args) {
-        return axios.get(`${SERVER_DOMAIN}/companies/${parentValue.id}/users`)
+        const {limit = 20} = args;
+        return axios.get(`${SERVER_DOMAIN}/companies/${parentValue.id}/users?_limit=${limit}`)
           .then(req => req.data);
       }
     }

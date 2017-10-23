@@ -40,6 +40,27 @@
       "id": "3",
       "name": "Google",
       "description": "Search"
+    },
+    {
+      "id": "4",
+      "name": "Samsung",
+      "description": "S8"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "아이폰",
+      "description": "Apple",
+      "companyId" : "2",
+      "price" : 1000000
+    },
+    {
+      "id": "2",
+      "name": "갤럭시",
+      "description": "Samsung",
+      "companyId" : "4",
+      "price" : 999000
     }
   ]
 }
